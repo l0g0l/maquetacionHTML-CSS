@@ -1,0 +1,363 @@
+/*FUENTES*/
+
+@font-face {
+  font-family: "nevis";
+  /*cargo la fuente para los diferentes tipos de navegadores*/
+  src: url("./fonts/nevis.eot");
+  src: url("./fonts/nevis.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/nevis.woff") format("woff"),
+    url("./fonts/nevis.ttf") format("truetype"),
+    url("./fonts/nevis.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "fajala";
+  src: url("./fonts/FjallaOne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "icons";
+  /*cargo la fuente para los diferentes tipos de navegadores*/
+  src: url("./fonts/websymbols-regular-webfont.svg#WebSymbolsRegular")
+    format("svg");
+  src: url("./fonts/websymbols-regular-webfont.eot") format("embedded-opentype"),
+    url("./fonts/websymbols-regular-webfont.woff") format("woff"),
+    url("./fonts/websymbols-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*ESTILOS GRALES*/
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+body {
+  background-image: url(../img/paven.png);
+}
+
+/*HEADER*/
+
+.header {
+  min-width: 1024px;
+  width: 100%;
+  height: 250px;
+  margin: 0 auto;
+}
+.header a {
+  text-decoration: none;
+}
+.header .logo {
+  width: 770px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.header .logo img {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 140px;
+}
+.header h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family: "nevis";
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-top: 10px;
+  text-shadow: 0 2px 1px #3333;
+  transition: all 300ms;
+}
+.header h1:hover {
+  text-shadow: 0 2px 1px #3333, 0 0 4px #70b231;
+}
+.header h1 a {
+  color: #70b231;
+}
+/*NAV*/
+
+.nav {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  height: 40px;
+  font-family: "sans-serif", "Helvetica", "Arial";
+  font-size: 14px;
+  box-shadow: 0 0 2px gray;
+}
+.nav ul {
+  list-style: none;
+  margin: 0 auto;
+  width: 1090px;
+}
+.nav > ul > li {
+  line-height: 40px;
+  float: left;
+  border-right: 1px solid gray;
+  transition: all 300ms;
+}
+.nav > ul > li a {
+  display: block; /* los hago block para poderlos posicionar donde quiera*/
+  padding: 0 20px;
+  color: white;
+  text-decoration: none;
+}
+.nav > ul > li > a:first-child {
+  border-left: 1px solid gray; /*le pinto el borde vertical al primer elemento*/
+}
+.nav > ul > li:hover {
+  background-color: #70b231;
+  box-shadow: 0 0 4px green inset; /*sombra hacia adentro*/
+}
+
+/*MENU DESPLEGABLE*/
+
+.nav > ul > li > ul {
+  display: none; /*esconde la ul dentro de la primera ul hasta que le haga hover al menú y se despliegue*/
+  position: absolute;
+  width: 160px;
+  box-shadow: 0 2px 2px gray;
+  z-index: 1;
+}
+.nav > ul > li:hover > ul {
+  display: block; /*cuando haces el hover el los li, se visualiza el desplegable*/
+}
+.nav > ul > li:hover > ul > li {
+  background-color: #f2f1f0;
+  border-bottom: 1px solid #d6d6d6;
+  padding: 8px;
+  line-height: 25px; /*para que los alinee verticalmente*/
+  font-size: 12px;
+  transition: all 30ms;
+}
+.nav > ul > li:hover > ul > li a {
+  color: rgba(19, 18, 18, 0.4);
+  font-weight: bold;
+}
+.nav > ul > li:hover > ul > li:hover {
+  /*puedo poner varios hover*/
+  box-shadow: 0 0 4px #ccc inset;
+}
+
+/*CONTENIDO*/
+
+.content {
+  width: 1250px;
+  min-height: 1100px;
+  margin: 0 auto;
+  font-family: "sans-serif", "Helvetica", "Arial";
+}
+
+/*BARRA LATERAL, ASIDE*/
+
+.aside,
+.txt {
+  width: 200px;
+  float: left;
+  margin: 30px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 2px #ccc;
+  font-family: "sans-serif", "Helvetica", "Arial";
+}
+.txt {
+  width: 180px; /*al meterle el padding de 10px a cada lado, sumarian 220px, por eso es más ancha que la columna anterior, le restamos al width ese paddin 200 menos los 20px*/
+  padding: 10px;
+  font-size: 14px;
+  font-family: "sans-serif";
+}
+.aside .widget {
+  display: block;
+  width: 180px;
+  margin: 5px auto;
+  padding: 8px 10px;
+  font-size: 14px;
+  border-bottom: 1px dashed #333;
+}
+.aside .widget:last-child {
+  margin-bottom: 20px;
+}
+
+/*ENCABEZADOS ASIDE*/
+
+.aside h3 {
+  display: block;
+  color: #333;
+  width: 100%;
+  text-align: center;
+  padding: 2px 0;
+  margin-bottom: 16px;
+  background-color: #f2f3f2;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+.red {
+  color: #9b2422 !important;
+}
+.blue {
+  color: #0c73f0 !important;
+}
+.orange {
+  color: #d69d2a !important;
+}
+/*FORMULARIOS*/
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  border: 1px solid #c9c9c9;
+  box-shadow: 0 0 2px #ccc;
+  background-color: white;
+  padding: 1px 2px;
+  color: gray;
+  transition: all 300ms;
+}
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border: 1px solid #70b231 !important;
+  color: black;
+}
+input[type="submit"] {
+  display: block;
+  border-radius: 2px;
+  width: 60px;
+  padding: 3px;
+  color: white;
+  background-color: #70b231;
+  border: 1px solid green;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  /*cuando paso por encima*/
+  box-shadow: 0 0 4px gray;
+}
+input[type="submit"]:acive {
+  /*cuando clicko*/
+  box-shadow: 0 0 4px gray inset;
+  text-shadow: 0 0 1px #ccc;
+}
+.aside div label,
+.aside div Input[type="text"],
+.aside div Input[type="email"],
+.aside div Input[type="password"],
+.aside div a {
+  display: block;
+  width: 95%;
+  margin: 8px 0;
+}
+.aside div Input[type="text"],
+.aside div Input[type="email"],
+.aside div Input[type="password"] {
+  margin: 5px 0;
+}
+.aside input,
+.aside label {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*ENLACES*/
+
+a {
+  color: #529125;
+  text-decoration: none;
+}
+a:hover {
+  /*cuando paso por encima*/
+  color: #285616;
+  text-decoration: none;
+}
+a:visited {
+  /*cuando son visitados*/
+  color: #70b231;
+  text-decoration: none;
+}
+.aside li {
+  margin: 8px 0 5px 20px;
+  list-style: square;
+}
+
+/* NOTICIAS CENTRALES*/
+
+.container-sections {
+  float: right;
+  width: 75%;
+  font-family: "sans-serif", "Helvetica", "Arial";
+  margin-right: 20px;
+}
+.container-sections .encabezado-news {
+  font-family: "fajala";
+  font-size: 24px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: -20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.container-sections section {
+  margin-top: 40px;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 4px #c9c9c9;
+  color: #333;
+  font-size: 16px;
+  overflow: hidden;
+}
+.container-sections .article-news {
+  margin: 20px 20px;
+}
+.container-sections .date {
+  color: gray;
+  font-size: 14px;
+}
+
+/*COLOCACION DE LAS PEGATINAS*/
+
+.container-sections .celo1,
+.container-sections .celo2 {
+  position: absolute;
+  margin-top: -38px;
+  z-index: 0;
+}
+.container-sections .celo2 {
+  margin-left: 860px;
+}
+
+/*ICONOS AL COMIENZO DEL TEXTO*/
+
+.icon {
+  width: 15px;
+  float: left;
+  margin-right: 5px;
+  margin-top: -2px;
+}
+
+/*FRASE DEL FINAL*/
+
+.limpiarflotados {
+  clear: both;
+  float: none;
+}
+.history {
+  float: right;
+  margin: 20px;
+}
+footer {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 60px;
+  background-color: #333;
+  padding: 10px 0;
+  color: white;
+  font-family: "sans-serif";
+  font-size: 14px;
+  box-shadow: 0 0 2px gray;
+}
