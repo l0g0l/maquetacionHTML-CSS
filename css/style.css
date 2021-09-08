@@ -84,7 +84,7 @@ body {
   background-color: #333;
   color: #fff;
   height: 40px;
-  font-family: "sans-serif", "Helvetica", "Arial";
+  font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
   font-size: 14px;
   box-shadow: 0 0 2px gray;
 }
@@ -148,7 +148,7 @@ body {
   width: 1250px;
   min-height: 1100px;
   margin: 0 auto;
-  font-family: "sans-serif", "Helvetica", "Arial";
+  font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
 }
 
 /*BARRA LATERAL, ASIDE*/
@@ -161,7 +161,7 @@ body {
   background-color: white;
   border: 1px solid #ccc;
   box-shadow: 0 2px 2px #ccc;
-  font-family: "sans-serif", "Helvetica", "Arial";
+  font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
 }
 .txt {
   width: 180px; /*al meterle el padding de 10px a cada lado, sumarian 220px, por eso es más ancha que la columna anterior, le restamos al width ese paddin 200 menos los 20px*/
@@ -235,7 +235,7 @@ input[type="submit"]:hover {
   /*cuando paso por encima*/
   box-shadow: 0 0 4px gray;
 }
-input[type="submit"]:acive {
+input[type="submit"]:active {
   /*cuando clicko*/
   box-shadow: 0 0 4px gray inset;
   text-shadow: 0 0 1px #ccc;
@@ -286,7 +286,7 @@ a:visited {
 .container-sections {
   float: right;
   width: 75%;
-  font-family: "sans-serif", "Helvetica", "Arial";
+  font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
   margin-right: 20px;
 }
 .container-sections .encabezado-news {
